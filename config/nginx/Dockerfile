@@ -1,5 +1,5 @@
 FROM nginx:1.15
-LABEL MAINTAINER="Mohammad Babazadeh | https://boby.cloud"
+LABEL MAINTAINER="Houman Judaki"
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
