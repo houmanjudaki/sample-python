@@ -9,15 +9,15 @@ services:
     ports:
       - "80:80"
     volumes:
-      - blogpy_static_volume:/blogpy/static
-      - blogpy_files_volume:/blogpy/files
+      - sample-python_static_volume:/sample-python/static
+      - sample-python_files_volume:/sample-python/files
     networks:
       - nginx_network
 
 volumes:
-  blogpy_static_volume:
+  sample-python_static_volume:
     external: true
-  blogpy_files_volume:
+  sample-python_files_volume:
     external: true
 networks:
   nginx_network:
