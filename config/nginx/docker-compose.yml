@@ -8,17 +8,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
-    volumes:
-      - sample-python_static_volume:/sample-python/static
-      - sample-python_files_volume:/sample-python/files
+
     networks:
       - nginx_network
 
-volumes:
-  sample-python_static_volume:
-    external: true
-  sample-python_files_volume:
-    external: true
+
 networks:
   nginx_network:
     external: true
