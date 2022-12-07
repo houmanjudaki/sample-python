@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  sample-python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/sample-python
+      - blogpy_static_volume:/sample-python/static
+      - blogpy_files_volume:/sample-python/files
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - sample-python_network
+      - nginx_network
+    depends_on:
+      - sample-python_postgresql
+  sample-python_postgresql:
+    image: postgres:10
+    container_name: sample-python_postgresql
+    volumes:
+      - sample-python_postgresql:/var/lib/postgresql/data
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - sample-python_network
+
+volumes:
+  sample-python_postgresql:
+    external: true
+  sample-python_static_volume:
+    external: true
+  sample-python_files_volume:
+    external: true
+networks:
+  sample-python_network:
+    external: true
+  nginx_network:
+    external: true
