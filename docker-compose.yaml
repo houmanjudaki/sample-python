@@ -12,8 +12,6 @@ services:
     networks:
       - sample-python_network
       - nginx_network
-    depends_on:
-      - nginx_network
 
 networks:
   sample-python_network:
