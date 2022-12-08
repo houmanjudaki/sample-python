@@ -9,3 +9,4 @@ else
     echo "root /var/www/site;" > $SiteStatusConfig
 fi
 nginx -s reload
+
