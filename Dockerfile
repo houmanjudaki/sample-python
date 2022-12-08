@@ -1,7 +1,6 @@
 FROM python:3.8
 LABEL MAINTAINER="Houman Judaki"
 
-ENV PYTHONUNBUFFERED 1
 
 # Set working directory
 RUN mkdir /sample-python
