@@ -8,7 +8,7 @@ WORKDIR /sample-python
 COPY . /sample-python
 
 # Installing requirements
-ADD requirements/requirements.txt /sample-python
+ADD requirements.txt /sample-python
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
