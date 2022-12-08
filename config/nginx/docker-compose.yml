@@ -7,7 +7,7 @@ services:
       ports:
           - 8080:8080
           - 8081:8081
-      restart: always
+   
  
 
   nginx:
@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      restart: always
+      
 
     ports:
       - "80:80"
