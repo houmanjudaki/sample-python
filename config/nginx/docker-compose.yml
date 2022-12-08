@@ -1,16 +1,29 @@
 version: '3'
 
 services:
+
+  reverseproxy:
+      image: reverseproxy
+      ports:
+          - 8080:8080
+          - 8081:8081
+      restart: always
+ 
+
   nginx:
     container_name: nginx
     build:
       context: .
       dockerfile: Dockerfile
+      restart: always
+
     ports:
       - "80:80"
 
     networks:
       - nginx_network
+    depends_on:
+      - reverseproxy
 
 
 networks:
