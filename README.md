@@ -91,7 +91,7 @@ $ docker ps -a
 ```sh
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 fc6cc9d6d3d7        nginx_nginx         "nginx -g 'daemon of…"   2 hours ago         Up 2 hours          0.0.0.0:80->80/tcp       nginx
-05103904dcb8        ae80efb17475        "gunicorn --chdir bl…"   2 hours ago         Up 2 hours          0.0.0.0:8000->8000/tcp   sample-python
+05103904dcb8        ae80efb17475        "python.............."   2 hours ago         Up 2 hours          0.0.0.0:8000->8000/tcp   sample-python
 
 ```
 
