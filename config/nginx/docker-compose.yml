@@ -16,6 +16,8 @@ services:
     networks:
       - nginx_network
 
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
 
 
 networks:
