@@ -13,5 +13,6 @@ ADD requirements.txt /sample-python
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+RUN chmod -R 755 /sample-python/
 
 CMD ["python", "./server.py"]
