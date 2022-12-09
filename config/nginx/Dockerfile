@@ -1,4 +1,4 @@
-FROM nginx:1.15
+FROM nginx:1.16
 LABEL MAINTAINER="Houman Judaki"
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
