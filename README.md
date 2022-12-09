@@ -68,14 +68,10 @@ $ git clone https://github.com/houmanjudaki/sample-python.git
 ```
 Then create **docker network** and **volumes** as below.
 
-```sh
-$ docker volume create blogpy_postgresql
-$ docker volume create blogpy_static_volume
-$ docker volume create blogpy_files_volume
-```
+
 ```sh
 $ docker network create nginx_network
-$ docker network create blogpy_network
+$ docker network create sample-python_network
 ```
 
 Now run python **docker-compose**.
